@@ -1,0 +1,667 @@
+/* СБРОС И БАЗОВЫЕ СТИЛИ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ОСНОВНОЙ КОНТЕЙНЕР */
+.resume {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+/* КОНТЕЙНЕР ДЛЯ КНОПКИ СКАЧИВАНИЯ */
+.download-container {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 100;
+}
+
+.download-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.download-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+/* ЛЕВАЯ КОЛОНКА */
+.sidebar {
+    background: #f8fafc;
+    padding: 40px 25px;
+    border-right: 1px solid #e2e8f0;
+}
+
+.photo-container {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* СЕКЦИИ САЙДБАРА */
+.sidebar-section {
+    margin-bottom: 40px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-title i {
+    font-size: 18px;
+}
+
+/* КОНТАКТЫ */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-icon {
+    background: #3b82f6;
+    color: white;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.contact-link {
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #3b82f6;
+}
+
+.phone-hint {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* ТЕХНОЛОГИИ */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+/* ИНСТРУМЕНТЫ */
+.tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tool-item {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #bae6fd;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.main-content {
+    padding: 40px;
+    padding-top: 80px; /* Отступ для кнопки */
+}
+
+/* ШАПКА */
+.main-header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #64748b;
+}
+
+.position-main {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.divider {
+    color: #cbd5e1;
+}
+
+.experience {
+    font-size: 1rem;
+}
+
+/* СЕКЦИИ */
+.content-section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.section-header i {
+    color: #3b82f6;
+    font-size: 1.2rem;
+}
+
+/* ТАЙМЛАЙН ОПЫТА */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.timeline-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.timeline-header h3 {
+    color: #1e293b;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ПЛАШКИ ПРОЕКТОВ */
+.project-badge {
+    background: #f0f9ff;
+    color: #0369a1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #bae6fd;
+}
+
+/* ЗАДАЧИ ПРОЕКТОВ - ТОЧКИ */
+.project-tasks {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.project-tasks li {
+    margin-bottom: 10px;
+    color: #475569;
+    list-style-type: disc;
+}
+
+.nested-list {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.nested-list li {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 6px;
+    list-style-type: circle;
+}
+
+/* ТЕХНИЧЕСКИЙ СТЕК */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #bae6fd;
+}
+
+/* НАВЫКИ ГРИД */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-category {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-icon {
+    background: #dbeafe;
+    color: #1d4ed8;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skill-category h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.skill-category ul {
+    padding-left: 20px;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+    color: #475569;
+    list-style-type: disc;
+}
+
+/* ОБРАЗОВАНИЕ */
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.education-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.edu-icon {
+    background: #f0f9ff;
+    color: #0369a1;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.edu-content h3 {
+    color: #1e293b;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.edu-content p {
+    color: #64748b;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.edu-content a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.edu-content a:hover {
+    text-decoration: underline;
+}
+
+/* О СЕБЕ */
+.about-section {
+    margin-bottom: 30px;
+}
+
+.about-content {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* КОНТАКТЫ ДЛЯ СВЯЗИ */
+.contact-section {
+    margin-bottom: 30px;
+}
+
+.contact-content {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 25px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.contact-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: #3b82f6;
+    transition: all 0.2s;
+    width: 50%;
+}
+
+.contact-action:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+.contact-action i {
+    font-size: 28px;
+}
+
+.contact-action span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contact-action small {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.phone-info {
+    border-top: 1px dashed #e2e8f0;
+}
+
+.phone-label {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+.phone-link:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.phone-link i {
+    font-size: 16px;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 992px) {
+    .resume {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .download-container {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .main-content {
+        padding-top: 40px;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-action {
+        width: 100%;
+        max-width: 250px;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px 20px;
+        text-align: left;
+    }
+    
+    .contact-action i {
+        font-size: 24px;
+        min-width: 24px;
+    }
+    
+    .contact-action span {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .main-content {
+        padding: 25px;
+    }
+    
+    .name {
+        font-size: 2.2rem;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .position {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-stack {
+        gap: 6px;
+    }
+    
+    .tech-item {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+    
+    .contact-text {
+        font-size: 1rem;
+    }
+    
+    .phone-link {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
